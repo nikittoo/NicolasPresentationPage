@@ -3,103 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Uso de Bootstrap — Nicolas Racca</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Conocimientos sobre el frontend — Nicolas Racca</title>
 
   <link rel="stylesheet" href="../css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-200">
+<body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">★ Nicolas Racca</a>
-      <div>
-        <a class="btn btn-outline-light me-2" href="../index.html">Volver al perfil</a>
+  <header>
+    <nav class="hnav">
+      <div class="hdivizq">
+        <form role="search">
+          <input type="search" placeholder="Buscar..." aria-label="Buscar">
+          <button type="submit">🔍</button>
+        </form>
       </div>
-    </div>
-  </nav>
-
-  <main class="container py-4">
-
-    <div class="d-flex justify-content-center mb-4">
-      <button class="btn btn-primary btn-lg shadow" type="button" data-bs-toggle="collapse" data-bs-target="#demoBoot"
-        aria-expanded="false" aria-controls="demoBoot">
-        Uso de Bootstrap
-      </button>
-    </div>
-
-    <div class="collapse" id="demoBoot">
-      <div class="card card-body mb-4 shadow-lg border-primary">
-        <h5 class="card-title text-primary">Ejemplo rápido</h5>
-        <p class="card-text">
-          Bienvenido a mi demostración de Bootstrap. Aquí muestro cómo integro frameworks para crear interfaces limpias y funcionales, aplicando mis conocimientos en desarrollo web.
-        </p>
-        <div class="d-flex gap-2 flex-wrap">
-          <button class="btn btn-success">Acción</button>
-          <button class="btn btn-outline-secondary">Otra acción</button>
-          <a class="btn btn-info text-white" href="mailto:raccanico03@gmail.com">Contactar</a>
-        </div>
+      <div class="hdivder">
+        <h1>★ Nicolas Racca | Frontend</h1>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <div class="row g-3">
-      <div class="col-12 col-md-6">
-        <div class="card h-100 shadow-lg border-success">
-          <img src="../ph/csharp.jpg" class="card-img-top" alt="Proyecto en C#">
-          <div class="card-body">
-            <h5 class="card-title text-success">Proyecto en C#</h5>
-            <p class="card-text">Desarrollé una aplicación de consola en C# para gestionar inventarios, aplicando lógica de programación orientada a objetos y resolución de problemas. Fue un reto que me permitió profundizar en algoritmos y estructuras de datos.</p>
-            <a href="#" class="btn btn-success">Ver código</a>
+  <main class="MainIndex">
+    <div class="perfilPage5">
+      <div class="izquierdaPage5">
+        <div class="proyecto">
+          <div class="img-container">
+            <img src="../ph/DesarrolloWeb.jpg" alt="Desarrollo Web">
+          </div>
+          <div class="text-container">
+            <p>Proyecto Desarrollo Web: <a href="https://github.com/nikittoo/NicolasPresentationPage.git" target="_blank">GitHub</a></p>
           </div>
         </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <div class="card h-100 shadow-lg border-info">
-          <img src="../ph/ppp.jpg" class="card-img-top" alt="Sitio web personal">
-          <div class="card-body">
-            <h5 class="card-title text-info">Sitio web personal</h5>
-            <p class="card-text">Creé este sitio usando HTML, CSS y JavaScript, integrando Bootstrap para un diseño responsive. Me enfocé en la experiencia de usuario y la accesibilidad, aprendiendo a combinar tecnologías para proyectos reales.</p>
-            <a href="#" class="btn btn-outline-info">Ver sitio</a>
+        <div class="proyecto">
+          <div class="img-container">
+            <img src="../ph/Javascript.jpg" alt="JavaScript">
+          </div>
+          <div class="text-container">
+            <p>Proyecto JavaScript: <a href="https://github.com/nikittoo/curso-javascript.git" target="_blank">GitHub</a></p>
           </div>
         </div>
       </div>
     </div>
-
-    <hr class="my-4">
-
-    <div class="row">
-      <div class="col-12 col-lg-8">
-        <h4 class="text-primary">Mis experiencias con desarrollo:</h4>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item border-0">En C#, he trabajado en proyectos que requieren pensamiento lógico, como algoritmos para optimizar procesos.</li>
-          <li class="list-group-item border-0">Con HTML/CSS/JS, he construido interfaces intuitivas, aprendiendo a priorizar la usabilidad.</li>
-          <li class="list-group-item border-0">Mi formación en Ingeniería Electrónica me ayuda a integrar hardware y software en soluciones innovadoras.</li>
-        </ul>
-      </div>
-      <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-        <div class="text-center">
-          <div class="fs-1">🚀</div>
-          <p class="mb-0">Siempre aprendiendo y creando</p>
-        </div>
-      </div>
-    </div>
-
-    <footer class="mt-5 pt-4 border-top">
-      <div class="d-flex justify-content-between align-items-center">
-        <small class="text-muted">© 2025 Nicolas Racca</small>
-        <div class="btn-group">
-          <a class="btn btn-outline-dark" href="../index.html">Volver al perfil</a>
-          <a class="btn btn-dark" href="../Pages/Page1.html">Sobre mí</a>
-        </div>
-      </div>
-    </footer>
-
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <footer>
+    <a class="boton-personalizado" href="../index.html">Volver al perfil</a>
+  </footer>
+
+  <script src="../js/search.js"></script>
 </body>
 </html>

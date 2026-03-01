@@ -16,7 +16,8 @@
   .perfilPage1,
   .perfilPage2,
   .perfilPage3,
-  .perfilPage4 {
+  .perfilPage4,
+  .perfilPage5 {
     flex-direction: column;
     width: 90%;
     align-items: center;
@@ -25,6 +26,13 @@
   .hdivder {
     width: 100%;
     text-align: center;
+  }
+  .hdivizq form {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .hdivizq input[type="search"] {
+    width: 70%;
   }
   .izquierda,
   .derecha {
@@ -133,8 +141,18 @@
     width: 100%;
     padding: 0;
     margin: 0;
+  }  .izquierdaPage5 .proyecto {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  
+  .izquierdaPage5 .img-container,
+  .izquierdaPage5 .text-container {
+    width: 100%;
+  }
+  .izquierdaPage5 .text-container p {
+    text-align: center;
+  }  
   .perfilPage3 .texto,
   .derechaPage3 .texto,
   .izquierdaPage3 .texto {
