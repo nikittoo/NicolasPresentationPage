@@ -1,140 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nicolas Racca — Perfil de Desarrollo Web e Ingeniería</title>
+  <title>Nicolás Racca — Desarrollador Web & Ingeniero</title>
   <meta name="description" content="Soy Nicolás Racca: desarrollador web, estudiante de Ingeniería Informática con formación en Ingeniería Electrónica. Proyectos en C#, Go, HTML, CSS y JS.">
 
-  <meta property="og:title" content="Nicolas Racca — Perfil de Desarrollo Web">
+  <meta property="og:title" content="Nicolás Racca — Perfil de Desarrollo Web">
   <meta property="og:description" content="Desarrollador web y estudiante de Ingeniería Informática. Proyectos y experiencias en C#, web y automatización.">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nicolas Racca — Perfil">
+  <meta name="twitter:title" content="Nicolás Racca — Perfil">
   <meta name="twitter:description" content="Desarrollador web y estudiante de Ingeniería Informática.">
 
   <meta name="robots" content="index, follow">
 
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- HEADER/NAVEGACIÓN -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <h1>✦ Nicolás Racca</h1>
+      </div>
 
-    <header>
-        <nav class="hnav">
+      <button class="hamburger" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <div class="hdivizq">
-                <form role="search">
+      <ul class="navbar-links" id="navbar-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                    <input type="search" placeholder="Buscar..." aria-label="Buscar">
-                    
-                    <button type="submit">
-                        🔍
-                    </button>
+  <main>
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h2>Ingeniero en proceso</h2>
+        <p>Apasionado por la programación, el desarrollo web y la innovación tecnológica. Estudiante de Ingeniería Informática.</p>
+      </div>
+    </section>
 
-                </form>
-            </div>
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <h2 class="section-title">Sobre Mí</h2>
 
-            <div class="hdivder">
-                <h1>
-                    ★ Nicolas Racca
-                </h1>
-            </div>
-
-        </nav>
-    </header>
-
-    <main class = "MainIndex">
-        <div class="perfilIndex">
-            <div class="izquierdaIndex">
-                <img src="ph/NicolasRacca.jpg" alt="Imagen de portada">
-
-                <h2>Todo lo que he avanzado en mi vida</h2>
-                <br>
-                <h4>Bienvenidos</h4>
-                <br>
-                <p class = "texto">Apasionado por la programación y el desarrollo web. Ex estudiante de Ingeniería Electrónica en la UTN
-                    Córdoba y actualmente cursando Ingeniería Informática. Siempre en busca de nuevos desafíos para
-                    potenciar mis conocimientos y crecer profesionalmente.</p>
-            </div>
-
-            <div class="derechaIndex">
-                <h1>Yo: </h1>
-
-                <details>
-                    <summary>Descripción</summary>
-                    <p class = "texto">
-                        Soy una persona dedicada al crecimiento profesional y personal. Tengo formación en ingeniería electrónica y actualmente estudio ingeniería informática, lo que me permite combinar conocimientos técnicos con nuevas herramientas digitales.<br>
-                        Me gusta el desarrollo web y la programación orientada a objetos. Uso herramientas como Visual Studio Code, GitHub y Git para organizar y mejorar mi trabajo.<br>
-                       
-                        Mi objetivo es seguir creciendo y prepararme para el futuro tecnológico.
-                    </p>
-                </details>
-                <details>
-                    <summary>Virtudes</summary>
-                    <p class = "texto">
-                        Destaco por mi perseverancia y responsabilidad al enfrentar nuevos desafíos,
-                        así como por una curiosidad constante que me impulsa a aprender. Me adapto con
-                        facilidad a entornos de trabajo dinámicos, lo que me permite aportar valor en cada proyecto.
-                        Mi actitud proactiva y colaborativa me convierte en un miembro valioso para cualquier equipo, 
-                        contribuyendo tanto a nivel técnico como personal.
-                    </p>
-                </details>
-                <details>
-                    <summary>Pasatiempo</summary>
-                    <p class = "texto">
-                        Fuera del ámbito laboral, me mantengo activo en el mundo de la tecnología explorando
-                        nuevas herramientas de desarrollo, aprendiendo lenguajes de programación de forma autodidacta
-                        y creando pequeños proyectos personales que me desafían. Para desconectar, disfruto escuchando música
-                        y personalizando mi espacio de trabajo.
-                    </p>
-                </details>
-                <details>
-                    <summary>Forma de ser</summary>
-                    <p class = "texto">
-                        A lo largo de mi carrera, he cultivado un enfoque de trabajo marcado por la constancia,
-                        la proactividad y un alto compromiso con cada desafío. Me esfuerzo por aprender continuamente,
-                        mantenerme en constante movimiento y evaluar mis propios resultados de forma autocrítica.
-                        <br>
-                        Valoro el trabajo en equipo y disfruto de las responsabilidades individuales.
-                        Mi curiosidad y disciplina me han permitido avanzar tanto en mi formación académica como
-                        en mis proyectos personales. Mi meta es clara: crecer profesionalmente sin perder la pasión por lo que hago.
-                    </p>
-                </details>
-                <details>
-                    <summary>Experiencia</summary>
-                    <p class = "texto">
-                        Me desempeño como asistente administrativo, colaborando con un contador en la gestión de diversas tareas de oficina.
-                        <br>
-                        Durante el año 2025 inicié un curso intensivo de desarrollo web, donde adquirí y apliqué
-                        conocimientos en HTML, CSS y JavaScript para crear mi primera página web funcional desde cero.
-                        En la cual vos estas navegando en este momento.
-                    </p>
-                </details>
-
-                <details>
-                    <summary>Mas...</summary>
-                    <a class="boton-personalizado-summary" role="button" href="Pages/Page1.html">Mas sobre mi..</a>
-                    <a class="boton-personalizado-summary" role="button" href="Pages/Page2.html">Mi Perfil.</a>
-                    <a class="boton-personalizado-summary" role="button" href="Pages/Page3.html">Mis aspiraciones.</a>
-                    <a class="boton-personalizado-summary" role="button" href="Pages/Page4.html">Mis proyectos.</a>
-                    <a class="boton-personalizado-summary" role="button" href="Pages/Page5.html">Conocimientos sobre el frontend.</a>
-                </details>
-            </div>
-        </nav>
-    </main>
-
-    <footer>
-        <div class="footer-contacto">
-            <a class="boton-personalizado" href="https://ar.linkedin.com/in/nicolas-racca-45ba022a3" target="_blank">Linkedin</a>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>📖 Descripción</h3>
+          <p>Soy una persona dedicada al crecimiento profesional y personal. Tengo formación en ingeniería electrónica y actualmente estudio ingeniería informática, lo que me permite combinar conocimientos técnicos con nuevas herramientas digitales.</p>
+          <p>Me gusta el desarrollo web y la programación orientada a objetos. Uso herramientas como Visual Studio Code, GitHub y Git para organizar y mejorar mi trabajo.</p>
         </div>
-    </footer>
 
-    <script src="js/search.js"></script>
+        <div class="card">
+          <h3>💪 Virtudes</h3>
+          <p>Destaco por mi perseverancia y responsabilidad al enfrentar nuevos desafíos, así como por una curiosidad constante que me impulsa a aprender.</p>
+          <p>Me adapto con facilidad a entornos de trabajo dinámicos, lo que me permite aportar valor en cada proyecto. Mi actitud proactiva y colaborativa me convierte en un miembro valioso para cualquier equipo.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎮 Pasatiempo</h3>
+          <p>Fuera del ámbito laboral, me mantengo activo en el mundo de la tecnología explorando nuevas herramientas de desarrollo y aprendiendo lenguajes de programación de forma autodidacta.</p>
+          <p>Para desconectar, disfruto escuchando música y personalizando mi espacio de trabajo.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Forma de Ser</h3>
+          <p>Me esfuerzo por aprender continuamente, mantenerme en constante movimiento y evaluar mis propios resultados de forma autocrítica.</p>
+          <p>Valoro el trabajo en equipo y disfruto de las responsabilidades individuales. Mi meta es clara: crecer profesionalmente sin perder la pasión por lo que hago.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA -->
+    <section id="experiencia" class="section">
+      <h2 class="section-title">Mi Experiencia</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Asistente Administrativo</h3>
+            <p class="timeline-date">Actualidad</p>
+            <p>Colaboro como asistente administrativo con un contador en la gestión de diversas tareas de oficina, desarrollando habilidades de organización y eficiencia.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Curso Intensivo de Desarrollo Web</h3>
+            <p class="timeline-date">2025</p>
+            <p>Completé un curso intensivo donde adquirí conocimientos en HTML, CSS y JavaScript. Creé mi primera página web funcional desde cero, que es esta que ves en este momento.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Ingeniería Electrónica - UTN Córdoba</h3>
+            <p class="timeline-date">2023-2024</p>
+            <p>Estudié Ingeniería Electrónica, donde adquirí sólidos conocimientos en programación, circuitos y sistemas digitales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="proyectos" class="section">
+      <h2 class="section-title">Mis Proyectos</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-tag">Web</div>
+          <h3>Esta Página Web</h3>
+          <p>Portafolio personal creado con HTML, CSS y JavaScript. Optimizado con SASS, diseño responsivo con Flexbox y media queries.</p>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS/SASS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">C#</div>
+          <h3>Proyectos en C#</h3>
+          <p>Desarrollo de aplicaciones con C# utilizando principios de POO. Experiencia con frameworks y librerías modernas.</p>
+          <div class="project-tech">
+            <span class="tech-badge">C#</span>
+            <span class="tech-badge">POO</span>
+            <span class="tech-badge">.NET</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">Go</div>
+          <h3>Automatización en Go</h3>
+          <p>Proyectos de automatización y herramientas de desarrollo utilizando Go. Enfoque en eficiencia y performance.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Go</span>
+            <span class="tech-badge">Automation</span>
+            <span class="tech-badge">CLI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONOCIMIENTOS -->
+    <section id="conocimientos" class="section">
+      <h2 class="section-title">Mis Conocimientos</h2>
+
+      <div class="skills-container">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">🌐</span>
+            <h4>HTML</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 95%"></div>
+          </div>
+          <p class="skill-percentage">95%</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">🎨</span>
+            <h4>CSS/SASS</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 90%"></div>
+          </div>
+          <p class="skill-percentage">90%</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">⚡</span>
+            <h4>JavaScript</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 80%"></div>
+          </div>
+          <p class="skill-percentage">80%</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">#️⃣</span>
+            <h4>C#</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 75%"></div>
+          </div>
+          <p class="skill-percentage">75%</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">🔧</span>
+            <h4>Git & GitHub</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 85%"></div>
+          </div>
+          <p class="skill-percentage">85%</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-icon">🚀</span>
+            <h4>Go</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 70%"></div>
+          </div>
+          <p class="skill-percentage">70%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CERTIFICACIONES -->
+    <section id="certificaciones" class="section">
+      <h2 class="section-title">Mis Certificaciones</h2>
+
+      <div class="certifications-grid">
+        <div class="certification-card">
+          <div class="cert-image-container">
+            <img src="ph/DesarrolloWeb.jpg" alt="Certificado Desarrollo Web" class="cert-image">
+          </div>
+          <h3>Desarrollo Web</h3>
+          <p>Certificación en desarrollo web completo con HTML, CSS y JavaScript. Fundamentos para crear sitios web modernos y responsivos.</p>
+        </div>
+
+        <div class="certification-card">
+          <div class="cert-image-container">
+            <img src="ph/Javascript.jpg" alt="Certificado JavaScript" class="cert-image">
+          </div>
+          <h3>JavaScript</h3>
+          <p>Dominio avanzado de JavaScript. Programación orientada a objetos, manejo de eventos, DOM y prácticas modernas de desarrollo.</p>
+        </div>
+
+        <div class="certification-card">
+          <div class="cert-image-container">
+            <img src="ph/ReactJs.jpg" alt="Certificado React JS" class="cert-image">
+          </div>
+          <h3>React JS</h3>
+          <p>Desarrollo de aplicaciones con React. Componentes, hooks, estado global y mejores prácticas en la creación de interfaces dinámicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="section">
+      <h2 class="section-title">Conectar Conmigo</h2>
+
+      <div class="contact-container">
+        <p>Me gustaría conectar contigo. Puedes encontrarme en:</p>
+
+        <div class="contact-links">
+          <a href="https://ar.linkedin.com/in/nicolas-racca-45ba022a3" target="_blank" class="contact-btn">
+            💼 LinkedIn
+          </a>
+          <br>
+          <a href="https://github.com/nikittoo" target="_blank" class="contact-btn">
+            🐙 GitHub
+          </a>
+          <br>
+          <a href="raccanico03@gmail.com" class="contact-btn">
+            📧 Email
+          </a>
+        </div>
+
+        <div class="cta-section">
+          <h3>Aspiraciones</h3>
+          <p>Mi objetivo es seguir creciendo y prepararme para el futuro tecnológico. Busco colaborar en proyectos desafiantes donde pueda aportar mis conocimientos y seguir aprendiendo cada día.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Nicolás Racca. Todos los derechos reservados.</p>
+    <p>Desarrollado con 💛 y pasión por la tecnología</p>
+  </footer>
+
+  <script src="js/search.js"></script>
 </body>
 
 </html>
