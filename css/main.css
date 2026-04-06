@@ -283,9 +283,9 @@ main {
 
 .timeline-content {
   background: linear-gradient(135deg, var(--primary-pastel) 0%, rgba(255, 249, 196, 0.3) 100%);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 10px;
-  width: 45%;
+  width: 55%;
   border-left: 4px solid var(--accent-light);
   transition: var(--transition);
 }
@@ -297,9 +297,9 @@ main {
 
 .timeline-content h3 {
   color: var(--primary-dark);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-date {
@@ -312,15 +312,8 @@ main {
 .timeline-content p {
   color: var(--text-light);
   font-size: 0.95rem;
-  line-height: 1.6;
-}
-  align-content: center;
-  flex-wrap: wrap;
-  height: auto;
-  width: 60%;
-  align-items: center;
-  margin-top: 0;
-  padding: 1vh;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .derechaPage3 img {
@@ -510,6 +503,101 @@ summary {
 
 .agregar-proyecto:hover {
   background: #005fa3;
+}
+
+/* ===== PROJECTS GRID ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-light), var(--primary-pastel));
+}
+
+.project-card:hover {
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+}
+
+.project-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.project-tag {
+  display: inline-block;
+  background: var(--primary-pastel);
+  color: var(--primary-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: var(--primary-dark);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.tech-badge {
+  background: var(--primary-pastel);
+  color: var(--primary-dark);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.project-card:hover .tech-badge {
+  background: var(--hover-light);
+  transform: scale(1.05);
 }
 
 /* ===== SKILLS ===== */
@@ -703,6 +791,11 @@ summary {
 
   .timeline-content {
     width: 100%;
+    padding: 1.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
   }
 
   .timeline::before {
@@ -790,6 +883,22 @@ summary {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-icon {
+    font-size: 3rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
   }
 
   .certifications-grid {
