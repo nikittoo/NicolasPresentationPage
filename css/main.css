@@ -2,16 +2,38 @@
 
 /* ===== VARIABLES CSS ===== */
 :root {
+  /* Brand colors - constant across themes (header, hero, footer, badges) */
   --primary-pastel: #FFF9C4;
   --primary-dark: #2C3E50;
   --accent-light: #FFE082;
+  --hover-light: #FFF59D;
+  --transition: all 0.3s ease;
+
+  /* Dark theme (default) */
+  --bg-page: linear-gradient(135deg, #1A2029 0%, #10141A 100%);
+  --bg-surface: #1E2530;
+  --bg-surface-soft: linear-gradient(135deg, rgba(255, 224, 130, 0.09) 0%, rgba(255, 249, 196, 0.03) 100%);
+  --bg-surface-soft-hover: linear-gradient(135deg, rgba(255, 224, 130, 0.16) 0%, rgba(255, 249, 196, 0.06) 100%);
+  --heading-color: #FFF3C4;
+  --text-dark: #F1F3F5;
+  --text-light: #AEB6C2;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --bg-page: linear-gradient(135deg, #FFF9C4 0%, #F5F5F5 100%);
+  --bg-surface: #FFFFFF;
+  --bg-surface-soft: linear-gradient(135deg, var(--primary-pastel) 0%, rgba(255, 249, 196, 0.5) 100%);
+  --bg-surface-soft-hover: linear-gradient(135deg, var(--hover-light) 0%, var(--primary-pastel) 100%);
+  --heading-color: var(--primary-dark);
   --text-dark: #1A1A1A;
   --text-light: #555555;
   --border-color: #E0E0E0;
-  --hover-light: #FFF59D;
   --shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
   --shadow-hover: 0 8px 25px rgba(44, 62, 80, 0.15);
-  --transition: all 0.3s ease;
 }
 
 /* ===== RESET ===== */
@@ -27,9 +49,11 @@ html {
 
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #FFF9C4 0%, #F5F5F5 100%);
+  background: var(--bg-page);
   color: var(--text-dark);
   line-height: 1.6;
+  padding-top: var(--header-height, 90px);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===== HEADER / NAVBAR ===== */
@@ -65,6 +89,34 @@ body {
   font-weight: 700;
   color: var(--primary-pastel);
   letter-spacing: 0.5px;
+}
+
+/* ===== NAVBAR ACTIONS (theme toggle + hamburger) ===== */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 249, 196, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-light);
+  background: rgba(255, 224, 130, 0.15);
+  transform: scale(1.08);
 }
 
 /* ===== HAMBURGER MENU ===== */
@@ -129,7 +181,7 @@ main {
 .hero {
   background: linear-gradient(135deg, var(--primary-dark), #34495E);
   color: white;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem 6rem;
   text-align: center;
   border-radius: 0 0 20px 20px;
 }
@@ -171,15 +223,16 @@ main {
 /* ===== SECTIONS ===== */
 .section {
   padding: 4rem 2rem;
-  background: white;
+  background: var(--bg-surface);
   margin: 2rem 0;
   border-radius: 15px;
   box-shadow: var(--shadow);
+  transition: background 0.3s ease;
 }
 
 .section-title {
   font-size: 2.2rem;
-  color: var(--primary-dark);
+  color: var(--heading-color);
   margin-bottom: 2.5rem;
   text-align: center;
   font-weight: 700;
@@ -208,25 +261,25 @@ main {
 }
 
 .card {
-  background: linear-gradient(135deg, var(--primary-pastel) 0%, rgba(255, 249, 196, 0.5) 100%);
+  background: var(--bg-surface-soft);
   padding: 2rem;
   border-radius: 12px;
   border: 2px solid var(--border-color);
   transition: var(--transition);
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
   border-color: var(--accent-light);
-  background: linear-gradient(135deg, var(--hover-light) 0%, var(--primary-pastel) 100%);
+  background: var(--bg-surface-soft-hover);
 }
 
 .card h3 {
   font-size: 1.3rem;
-  color: var(--primary-dark);
+  color: var(--heading-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -293,7 +346,7 @@ main {
 }
 
 .timeline-content {
-  background: linear-gradient(135deg, var(--primary-pastel) 0%, rgba(255, 249, 196, 0.3) 100%);
+  background: var(--bg-surface-soft);
   padding: 2rem;
   border-radius: 10px;
   width: 55%;
@@ -307,7 +360,7 @@ main {
 }
 
 .timeline-content h3 {
-  color: var(--primary-dark);
+  color: var(--heading-color);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -342,7 +395,7 @@ main {
 }
 
 .project-card {
-  background: white;
+  background: var(--bg-surface);
   border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 2.5rem 2rem;
@@ -393,7 +446,7 @@ main {
 }
 
 .project-card h3 {
-  color: var(--primary-dark);
+  color: var(--heading-color);
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -407,7 +460,7 @@ main {
 }
 
 .project-card a {
-  color: var(--primary-dark);
+  color: var(--heading-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -447,7 +500,7 @@ main {
 }
 
 .skill-item {
-  background: linear-gradient(135deg, var(--primary-pastel) 0%, rgba(255, 249, 196, 0.3) 100%);
+  background: var(--bg-surface-soft);
   padding: 2rem;
   border-radius: 12px;
   border: 2px solid var(--border-color);
@@ -477,7 +530,7 @@ main {
 }
 
 .skill-item h4 {
-  color: var(--primary-dark);
+  color: var(--heading-color);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
@@ -490,9 +543,9 @@ main {
 }
 
 .skill-tag {
-  background: white;
-  color: var(--primary-dark);
-  border: 1px solid rgba(44, 62, 80, 0.12);
+  background: var(--bg-surface);
+  color: var(--heading-color);
+  border: 1px solid var(--border-color);
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -501,7 +554,7 @@ main {
 }
 
 .skill-item:hover .skill-tag {
-  background: var(--hover-light);
+  background: var(--bg-surface-soft-hover);
   border-color: var(--accent-light);
 }
 
@@ -536,13 +589,13 @@ main {
 }
 
 .certification-card {
-  background: white;
+  background: var(--bg-surface);
   border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
   transition: var(--transition);
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .certification-card:hover {
@@ -557,7 +610,7 @@ main {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-pastel), rgba(255, 249, 196, 0.3));
+  background: var(--bg-surface-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,7 +634,7 @@ main {
 }
 
 .certification-card h3 {
-  color: var(--primary-dark);
+  color: var(--heading-color);
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
   font-weight: 600;
@@ -647,10 +700,21 @@ main {
     font-size: 1.5rem;
   }
 
+  .navbar-actions {
+    position: static;
+  }
+
   .hamburger {
     display: flex;
     position: absolute;
     left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .theme-toggle {
+    position: absolute;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -758,7 +822,7 @@ main {
   }
 
   .hero {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem 3rem;
     border-radius: 0;
   }
 
@@ -768,10 +832,6 @@ main {
 }
 
 @media (max-width: 480px) {
-  body {
-    padding-top: 60px;
-  }
-
   .navbar {
     padding: 0.6rem;
     flex-direction: row;
@@ -784,6 +844,12 @@ main {
 
   .hamburger {
     display: flex;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
   }
 
   .navbar-links {

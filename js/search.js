@@ -1,3 +1,41 @@
+// Theme toggle (dark mode by default)
+const themeToggle = document.getElementById('theme-toggle');
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem('theme');
+  } catch (e) {
+    return null;
+  }
+}
+
+function setStoredTheme(theme) {
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (e) { }
+}
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeToggle.textContent = '☀️';
+    themeToggle.setAttribute('aria-label', 'Cambiar a modo oscuro');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    themeToggle.textContent = '🌙';
+    themeToggle.setAttribute('aria-label', 'Cambiar a modo claro');
+  }
+}
+
+applyTheme(getStoredTheme() === 'light' ? 'light' : 'dark');
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const nextTheme = isLight ? 'dark' : 'light';
+  applyTheme(nextTheme);
+  setStoredTheme(nextTheme);
+});
+
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger-menu');
 const navbarMenu = document.getElementById('navbar-menu');
@@ -7,7 +45,6 @@ hamburger.addEventListener('click', () => {
   navbarMenu.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
 document.querySelectorAll('.navbar-links a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
@@ -15,9 +52,14 @@ document.querySelectorAll('.navbar-links a').forEach(link => {
   });
 });
 
-// Navbar hide/show on scroll
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
+
+function updateHeaderHeight() {
+  document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+}
+updateHeaderHeight();
+window.addEventListener('resize', updateHeaderHeight);
 
 window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
