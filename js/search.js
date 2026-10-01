@@ -22,7 +22,10 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (currentScroll > lastScrollTop && currentScroll > 100) {
+  if (currentScroll <= 50) {
+    // Near the top of the page - always show header
+    header.classList.remove('hide');
+  } else if (currentScroll > lastScrollTop) {
     // Scrolling DOWN - hide header
     header.classList.add('hide');
   } else {
